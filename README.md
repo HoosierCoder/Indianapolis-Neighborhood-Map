@@ -3,6 +3,8 @@
 Experience the awesome attractions of Indianapolis, IN with the application featuring Google Maps!
 The project uses knockout.js to provide the project JavaScript framework.
 
+Want to demo the application?  Click [here] (https://hoosiercoder.github.io/Indianapolis-Neighborhood-Map/)
+
 ## How To use
 It's quite simple, really.  Download the source code from this GitHub project to your computer.
 Using your favorite browser, open the index.html file, and you'll see the project in
