@@ -1,0 +1,74 @@
+<!--Dennis Johns-->
+<!--UDACITY Neighborhood Map Project-->
+<!--Neighborhood Subject: Indianapolis, IN-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta viewport tag to aid with mobile viewing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Neighborhood Map Project" content="Indy Map">
+
+    <title>Experience Indianapolis!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <main class="col p-0 navbar-inverse" style="background-color: rgb(255,224,51);">
+                <a href class="float-right m-3 navbar-light" data-target="#sidebar" data-toggle="collapse" >
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="content bg-inverse">
+                    <!-- Div to display google map -->
+                    <div id="map">
+                        <p class="map_error"></p>
+                    </div>
+                </div>
+            </main>
+            <!--Below is the sidebar menu -->
+            <!--What is shown is what is displayed when menu is toggled on-->
+            <nav class="show pt-2 h-100 sidebar_width" style="background-color: rgb(255,224,51);" id="sidebar">
+                <h4 class="app_title text-blue font-italic">This is Indy!</h4>
+
+                <input class="search" data-bind="textInput: searchOption, valueUpdate: 'afterkeydown'" placeholder="Indy's Best...">
+                <hr class="sidebar_hr">
+
+                <ul class="nav flex-column" data-bind="foreach: locationListFilter">
+                    <a href="#"><li class="nav-item text-blue location_list" data-bind="text: name, click: $parent.populateAndBounceMarker"></li></a>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/knockout-3.4.2.js" charset="utf-8"></script>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
+
+    <script src="js/markers.js" charset="utf-8"></script>
+    <script src="js/googleStyles.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA4y3SwT8MiEIkHUjS49lOgZBWSmN7tDM4&callback=startApp" onerror="googleError()">
+    </script>
+</body>
+</html>

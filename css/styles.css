@@ -1,0 +1,70 @@
+
+.sidebar_hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.location_list {
+    padding: 3px 5px 5px 5px;
+}
+.location_list:hover{
+    color: #337ab7;
+    cursor: pointer;
+    font: italic bold 12px/30px Georgia, serif;
+}
+
+.app_title {
+    padding: 15px 5px 10px 5px;
+}
+
+.sidebar_width {
+    min-width: 250px;
+}
+
+.iw_title {
+    font-size: 1.3em;
+}
+
+.iw_subtitle {
+    font-size: 1em;
+}
+
+.iw_address_title {
+    margin-bottom: 2px;
+    font-size: .95em;
+}
+
+.iw_address {
+    margin-bottom: 0;
+    font-size: .9em;
+}
+
+.padding-zero {
+    padding: 0 0 0 0;
+}
+
+.padding-sides-10 {
+    padding: 0 10px 0 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: .9em;
+}
+
+@media (max-width: 768px) {
+    .search {
+        font-size: .7em;
+        margin-top: 5px;
+    }
+}
+
+.map_error {
+    color: white;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
