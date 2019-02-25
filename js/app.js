@@ -1,3 +1,4 @@
+'use strict;'
 // Global Variables
 var map, clientID, clientSecret;
 
@@ -56,7 +57,7 @@ function AppViewModel() {
 
     this.populateAndBounceMarker = function() {
         self.populateInfoWindow(this, self.largeInfoWindow);
-        this.setAnimation(google.maps.Animation.Bounce);
+        this.setAnimation(google.maps.Animation.BOUNCE);
         setTimeout((function() {
             this.setAnimation(null);
         }).bind(this), 1400);
@@ -91,7 +92,7 @@ function AppViewModel() {
                 lng: this.markerLng,
                 article: this.markerArticle,
                 id: i,
-                animation: google.maps.Animation.Bounce,
+                animation: google.maps.Animation.DROP,
                 icon: {
                       url: "http://maps.google.com/mapfiles/ms/icons/grn-pushpin.png"}
             });
